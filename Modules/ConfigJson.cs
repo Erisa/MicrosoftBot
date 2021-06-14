@@ -139,6 +139,37 @@ namespace Cliptok
         [JsonProperty("supportRatelimitMinutes")]
         public int SupportRatelimitMinutes { get; private set; }
 
+
+        [JsonProperty("seizureDetection")]
+        public SeizureDetectionConfig SeizureDetection { get; private set; }
+
+    }
+
+    public class SeizureDetectionConfig
+    {
+        [JsonProperty("comparisonAccuracy")]
+        public int ComparisonAccuracy { get; private set; }
+        
+        [JsonProperty("maxDifferingPixels")]
+        public int MaxDifferingPixels { get; private set; }
+        
+        [JsonProperty("maxComparableFrames")]
+        public int MaxComparableFrames { get; private set; }
+        
+        [JsonProperty("harmlessAverageFrameDifference")]
+        public int HarmlessAverageFrameDifference { get; private set; }
+        
+        [JsonProperty("safeAverageFrameDifference")]
+        public int SafeAverageFrameDifference { get; private set; }
+        
+        [JsonProperty("penaltyAverageFrameDifference")]
+        public int PenaltyAverageFrameDifference { get; private set; }
+        
+        [JsonProperty("maxAverageFrameDifference")]
+        public int MaxAverageFrameDifference { get; private set; }
+        
+        [JsonProperty("unsafeGifValues")]
+        public List<int> UnsafeGifValues { get; private set; }
         [JsonProperty("massMentionBanThreshold")]
         public int MassMentionBanThreshold { get; private set; }
 
